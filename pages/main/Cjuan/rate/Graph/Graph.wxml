@@ -1,0 +1,52 @@
+<view>
+<view class="containers">
+        <!--标题-->
+    <view style='text-align:center;margin-bottom:15rpx;margin-top:15rpx;'>
+        {{chartTitle}}
+    </view>
+    <!--绘制canvas-->
+    <view style='background-color:#EFEFEF;width:1200rpx;;'>
+        <view style='display：inline;float:left;width:220rpx;position:relative;left:70rpx;'><canvas canvas-id="columnCanvas1" class="canvas" bindtouchstart="touch1" style='height:450rpx;'></canvas></view>
+        <view style='display：inline;float:left;width:220rpx;position:relative;left:35rpx;'><canvas canvas-id="columnCanvas2" class="canvas" bindtouchstart="touch2" style='height:450rpx;'></canvas></view>
+        <view style='display：inline;float:left;width:220rpx;position:relative;left:-1rpx;'><canvas canvas-id="columnCanvas3" class="canvas" bindtouchstart="touch3" style='height:450rpx;'></canvas></view>
+    </view>
+</view>
+
+ <view style='clear:both;'></view>
+
+ <view>
+    <view style='margin-top:30rpx;'>统计结果：</view>
+    <view style=' border-top: solid;margin-top:15rpx;margin-bottom:15rpx; border-color: #E0EEEE;'></view>
+    
+     <view style='margin-left:100rpx;margin-top:15rpx;'>
+       <text>应到人数 :</text>
+       <text>{{an+chi+que}}</text>
+     </view>
+
+     <view style='margin-left:100rpx;margin-top:15rpx;'>
+       <text>实到人数 :</text>
+       <text>{{an+chi}}</text>
+     </view>
+
+     <view style='margin-left:100rpx;margin-top:15rpx;'>
+       <text >准时人数 :</text>
+       <text>{{an}}</text>
+     </view>
+
+     <view style='margin-left:100rpx;margin-top:15rpx;'>
+       <text>迟到人数 :</text>
+       <text>{{chi}}</text>
+     </view>
+
+     <view style='margin-left:100rpx;margin-top:15rpx;'>
+       <text>缺旷人数 :</text>
+       <text>{{que}}</text>
+     </view>
+
+     
+
+ </view>
+
+
+</view>
+

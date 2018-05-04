@@ -1,0 +1,19 @@
+/* pages/CreateClass/Cclass.wxss */
+page{
+  background-color: #FFFFFF;  
+}
+.section{
+  margin-top: 50rpx;
+}
+.button-hover {
+  background-color: red;
+}
+/** 添加自定义button点击态样式类**/
+.other-button-hover {
+  background-color: blue;
+}
+
+.input{
+    padding-left: 10px;
+    height: 40px;
+}

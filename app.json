@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/template/tems",
+    "pages/CreateClass/Cclass",
+    "pages/main/deleteclass/delClass",
+    "pages/main/Cjuan/Cjuan",
+    "pages/login/login",
+    "pages/main/Stu/Stu",
+    "pages/main/Cjuan/Sign/Sign",
+    "pages/main/Cjuan/Sign/start/start",
+    "pages/main/Cjuan/Signgo/Signgo",
+    "pages/main/Cjuan/Tui/Tui",
+    "pages/Student/Sign/Sign",
+    "pages/xiaoxi/xiaoxi",
+    "pages/join/join",
+    "pages/main/Cjuan/rate/rate",
+    "pages/main/Cjuan/rate/Graph/Graph",
+    "pages/main/Cjuan/Online/Onlion",
+    "pages/select/select",
+    "pages/main/Cjuan/MClass/class",
+    "pages/main/Cjuan/Study/study",
+    "pages/main/Cjuan/Mstu/Mstu",
+    "pages/main/Cjuan/Tip/Tip",
+    "pages/template/Juan/Juan",
+    "pages/main/Cjuan/Sign/share/share",
+    "pages/Student/Signquery/Signquery",
+    "pages/Student/question/question",
+    "pages/Student/question/que/que",
+    "pages/main/Cjuan/rate/touchAn/touchAn",
+    "pages/main/Cjuan/rate/touchChi/touchChi",
+    "pages/main/Cjuan/rate/touchQue/touchQue",
+    "pages/Student/ScourList/Scour/Scour"
+  ],
+  "window": {
+    "navigationBarTitleText": "随堂助手",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F8F8FF",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#aa154e",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "pages/image/zhuye.png",
+        "selectedIconPath": "pages/image/zhuye1.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/xiaoxi/xiaoxi",
+        "iconPath": "pages/image/xiaoxi1.png",
+        "selectedIconPath": "pages/image/xiaoxi.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/template/tems",
+        "iconPath": "pages/image/chakan.png",
+        "selectedIconPath": "pages/image/chakan1.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "debug": "ture"
+}

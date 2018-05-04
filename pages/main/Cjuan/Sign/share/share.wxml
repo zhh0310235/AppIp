@@ -1,0 +1,21 @@
+<!--pages/main/Cjuan/Sign/share/share.wxml-->
+<view> 
+   
+    <view class="section">
+      <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">本次签到码</text>
+      <input class="inputs" id="id2" placeholder="{{code}}" style='background-color:#ffffff;border-radius:10px;' bindinput="bindBlur" />
+    </view>
+
+    <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到二维码</text>
+    <image src="{{src}}" style="width:100%;height:700rpx;"></image>
+  </view>
+
+    <view>
+      <button style='margin-top:50rpx;margin-left:300rpx;' type="primary" size="mini" bindtap="showDialogBtn">前往签到页</button>
+    </view>
+   <view><text style="float:left;margin-left:80rpx;margin-top:20rpx;font-size:13pt;">提示:请前往签到页面任选一种方式签到</text></view>
+</view>
+
+
+

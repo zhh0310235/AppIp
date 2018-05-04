@@ -1,0 +1,61 @@
+<!--pages/main/main.wxml-->
+<view>
+<view class="swiper-tab">  
+     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">班级课程</view>
+
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">消息</view>  
+     
+    
+  <!--
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav" style='display:none;'>发现</view>  
+    -->
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">   
+    
+     <!-- 我的班级 -->  
+<swiper-item style="overflow:scroll;">  
+  <scroll-view scroll-y style="height:auto;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    <view  wx:for="{{result}}"  class="swipers" wx:key="{{item.idclass}}">
+      <!-- 教师页面 --> 
+        <block wx:if="{{item.master=='true'}}">
+          <view style="float:left;font-style:normal;font-size:20pt;margin-left:30rpx;width:70%; " bindtap="goCjuan" data-text="{{item.idclass}}" data-name="{{item.name}}"><text>{{item.name}}</text></view>
+          <view style="float:right;font-style:normal;font-size:20pt;color:#09bb07;margin-right:40rpx;" bindtap="deleteclass" id="{{item.idclass}}" ><text>管理</text></view>
+          <view style="clear:both"></view>
+          <view bindtap="goCjuan" data-text="{{item.idclass}}" data-name="{{item.name}}"><text>　</text>
+            <view style="float:left;font-style:normal;font-size:15pt;height:100%;margin-left:30rpx;"><text>班级号：{{item.idclass}}</text></view>
+            <view style="float:right;font-style:normal;font-size:15pt;"><span class="badge">{{item.number}}人</span> <image src="../image/jiantouyou.png" style="width: 40rpx; height:40rpx; margin-right:10rpx;"></image> </view></view>
+            
+         </block>
+
+          <!-- 学生页面 --> 
+        <block wx:else>
+          <view style="float:left;font-style:normal;font-size:20pt;margin-left:30rpx;width:70%; " bindtap="goStu" data-text="{{item.idclass}}"><text>{{item.name}}</text></view>
+          <view style="float:right;font-style:normal;font-size:20pt;color:#09bb07;margin-right:40rpx;" bindtap="deleteclass" id="{{item.idclass}}" ><text>管理</text></view>
+          <view style="clear:both"></view>
+          <view bindtap="goStu" data-text="{{item.idclass}}"><text>　</text>
+            <view style="float:left;font-style:normal;font-size:15pt;height:100%;margin-left:30rpx;"><text>班级号：{{item.idclass}}</text></view>
+            <view style="float:right;font-style:normal;font-size:15pt;"><span class="badge">{{item.number}}人</span> <image src="../image/jiantouyou.png" style="width: 40rpx; height:40rpx; margin-right:10rpx;"></image> </view></view>
+          
+         </block>
+   </view> 
+         <view style='float:left;position:relative;bottom:0rpx;left:60%;font-size:20pt;color:#09bb07;display:{{show}}' bindtap="creatclass">我要开课</view>
+         <view style='float:left;position:relative;bottom:0rpx;left:60%;font-size:20pt;color:#09bb07;display:{{shows}}' bindtap="joinclass">加入班级</view>
+  </scroll-view>
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler" style='display:{{logins}}' > 点击登录</button> 
+</swiper-item>  
+ 
+ <!-- 我是消息 https://joango.cn/Img/sleep.png-->  
+    <swiper-item>  
+     <view class="section" >
+       <view style='margin-top:150rpx;margin-left:80rpx;;text-align:center;'>
+          <image src='https://joango.cn/Img/sleep.png' style='width:250rpx;height:250rpx;'></image>
+          <text style='margin-top:20rpx;display:block;'>没有任何消息</text>
+       </view>
+      </view>
+
+       
+    </swiper-item>  
+  
+</swiper>
+</view>

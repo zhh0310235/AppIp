@@ -1,0 +1,49 @@
+<!--
+<view class='xinxi'>
+<view>姓名：{{name}}</view>
+<view>班级：{{sclass}}</view>
+<view>{{term}}</view>
+</view>
+<view style='width:100%'>
+<view class='timeX'>
+<view>时间</view>
+<view>周一</view>
+<view>周二</view>
+<view>周三</view>
+<view>周四</view>
+<view>周五</view>
+</view>
+<view class='timeY'>
+<view>1</view>
+<view>2</view>
+<view>3</view>
+<view>4</view>
+<view>5</view>
+<view>6</view>
+<view>7</view>
+<view>8</view>
+<view>9</view>
+<view>10</view>
+<view>11</view>
+</view>
+</view>
+<view class='classContent'>
+<view>
+<view wx:for="{{classArray}}" wx:for-item="i" wx:key="">{{i}}</view>
+</view>
+<view>
+<view wx:for="{{classArray}}" wx:for-item="i" wx:key="">{{i}}</view>
+</view>
+<view>
+<view wx:for="{{classArray}}" wx:for-item="i" wx:key="">{{i}}</view>
+</view>
+<view>
+<view wx:for="{{classArray}}" wx:for-item="i" wx:key="">{{i}}</view>
+</view>
+<view>
+<view wx:for="{{classArray}}" wx:for-item="i" wx:key="">{{i}}</view>
+</view>
+</view>
+
+
+-->

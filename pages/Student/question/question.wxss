@@ -1,0 +1,37 @@
+.aa123{
+float:left;font-style:normal;font-size:17pt;height:100%;width: 550rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+margin-top:30rpx;background-color:#EBEBEB;
+}
+.swiper-tab{  
+    width: 100%;  
+  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #777777;  
+}  
+.on{ color: #da7c0c;  
+    border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: auto; width: 100%; overflow: auto;background-color: #F8F8FF; }  
+
+.swipers{
+  margin-top:1rem;
+  background-color: #ffffff;
+  overflow:scroll;
+}
+.badge{display:inline-block;min-width:10px;padding:3px 7px;font-size:15px;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;background-color:#fff;border-radius:10px}
+.section{
+  margin-top: 50rpx;
+}
+.imgleft{
+width: 60rpx;
+height:200rpx;
+margin-left:40rpx;
+float:left;
+}
+.badge{display:inline-block;float:right;margin-right:50rpx;min-width:10px;padding:3px 7px;font-size:15px;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;background-color:red;border-radius:30rpx}
+

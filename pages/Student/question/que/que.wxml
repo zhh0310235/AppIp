@@ -1,0 +1,53 @@
+<view style='width:100%;line-height:110rpx;position:fixed;left:0px;top:0px;background:#FFFFFF;text-align:center;z-index:10;'>开始测试</view>
+<view>
+<view style='width:100%;line-height:110rpx;'>　</view>
+<view wx:for="{{results}}"  wx:key="{{index}}">
+<view style=' border-bottom:30rpx solid #ebebeb;background-color:#E0EEEE;'></view>
+   <view><image src='https://joango.cn/Img/font.png' style='width:20rpx;height:60rpx;float:left;'></image>
+   <view wx:if="{{item.qType=='radio'}}" style='float:left;margin-left:35rpx;'>
+   <text style="font-size:40rpx;">单选题</text>
+   <text>　第{{item.qNumber}}题　{{item.qScor}}分</text>
+    <view style="margin-top:80rpx;">
+      <view style='float:left;margin-left:35rpx;margin-bottom:35rpx;'><text>{{item.qNumber}}、</text><text>{{item.qTopic}}()</text></view>  
+     <radio-group class="radio-group" bindchange="radioChange" data-number='{{item.qNumber}}' data-scor='{{item.qScor}}'>
+  <label class="radio" wx:for="{{item.answergo.length}}" wx:key="" wx:for-index="indexs" wx:for-item="items">
+    <radio value="{{item.answergo[indexs].select}}" checked="{{false}}" style='margin-left:100rpx;margin-top:35rpx;'/>{{item.answergo[indexs].answer}}
+    <view style='display:block;'></view>
+  </label>
+</radio-group>
+    </view>
+   </view>
+
+   <view wx:else="{{item.qType=='radio'}}" style='float:left;margin-left:35rpx;'>
+   <text style="font-size:40rpx;">多选题</text>
+   <text>　第{{item.qNumber}}题　{{item.qScor}}分</text>
+    <view style="margin-top:80rpx;">
+      <view style='float:left;margin-left:35rpx;margin-bottom:35rpx;'><text>{{item.qNumber}}、</text><text>{{item.qTopic}}()</text></view>  
+      <checkbox-group class="radio-group" bindchange="radioChange" data-number='{{item.qNumber}}' data-scor='{{item.qScor}}'>
+        <label class="checkbox" wx:for="{{item.answergo.length}}" wx:key="" wx:for-index="indexs" wx:for-item="items">
+          <checkbox  value="{{item.answergo[indexs].select}}" checked="{{false}}" style='margin-left:100rpx;margin-top:35rpx;'/>{{item.answergo[indexs].answer}}
+           <view style='display:block;'></view>
+        </label>
+      </checkbox-group>
+    </view>
+   </view>
+  
+   <view style='clear:both;'></view>
+   <view style=' border-top: dotted;margin-top:80rpx;margin-bottom:40rpx; border-color: #FFFFFF;'></view>
+   <view wx:if="{{news=='false'}}">
+   <view style=' border-top: dotted;margin-top:80rpx;margin-bottom:40rpx; border-color: #EAEAEA;'></view>
+   <view style='margin-left:60rpx;margin-bottom:40rpx;' >正确答案：{{item
+   .answer}}</view>
+   </view>
+   
+   </view>
+   
+</view>
+<view wx:if="{{news=='true'}}"> <view style=' border-top: solid;margin-top:80rpx;margin-bottom:40rpx; border-color: #EAEAEA;'></view>
+<button type="default" size="default"  plain="true" bindtap="showDialogBtn"  style=';width:75%;background-color:#53FF53; font-size: 18px；margin-top:50rpx;margin-bottom:50rpx;' hover-class="other-button-hover"> 提交 </button>
+</view>
+
+</view>
+
+
+

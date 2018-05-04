@@ -1,0 +1,36 @@
+<view>
+ <view style=' border-bottom:10px solid #ebebeb;background-color:#E0EEEE;'></view> 
+   <scroll-view scroll-y style="height:auto;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+          <view  wx:for="{{result}}"  class="swipers" wx:key="{{item.Titleid}}">
+           <view bindtap="goCjuan" data-text="{{item.Titleid}}">
+              <view class='aa124' style='font-size:50rpx;width: 495rpx;'>{{item.tName}}</view>
+              <view class='aa123'>2018-03-27</view>
+              <view style="clear:both"></view>
+              <view>
+              <view class='aa124' style='font-size:35rpx;width: 590rpx;color:#6B6B6B;'>{{item.tDetail}}</view>
+              <text class='aa123'>30人</text>
+              <view style="clear:both"></view>
+              </view> 
+              <view style='border-bottom:1px solid #ebebeb;background-color:#E0EEEE;margin-top:25rpx;margin-bottom:25rpx;'></view>
+             </view> 
+         </view> 
+        
+  </scroll-view>
+</view>
+
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">签到倒计时</view>
+  <view class="modal-content">
+    <view class="container">
+      <text>倒计时: {{second}} </text>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

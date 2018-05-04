@@ -1,0 +1,38 @@
+<!--pages/template/tems.wxml-->
+<view>
+  <view style='margin-top:15rpx;'><image style='width:20%;height:150rpx;margin-left:30rpx;float:left;' src='{{touImage}}'></image><view style='float:left;margin-left:50rpx;font-size:20pt;'>{{nnichen}}</view>
+  </view>
+  
+  <view style='clear:both;'></view>
+
+
+  <view bindtap="goJuan" style='margin-top:25rpx;'><image style='width:10%;height:80rpx;margin-left:30rpx;float:left;' src='https://joango.cn/Img/Scor.png'></image><view style='float:left;margin-left:30rpx;font-size:20pt;'>我的试卷库</view>
+  </view>
+  <view style=' border-bottom:1px solid #ebebeb ;;margin-bottom:20rpx'></view>
+
+  <view style='clear:both;'></view>
+  <view class='demo'></view>
+
+  <view bindtap="goback" style='margin-top:25rpx;'><image style='width:10%;height:80rpx;margin-left:30rpx;float:left;' src='https://joango.cn/Img/EditPassword.png'></image><view style='float:left;margin-left:30rpx;font-size:20pt;'>身份绑定</view>
+  </view>
+  <view style=' border-bottom:1px solid #ebebeb ;margin-left:45rpx;margin-bottom:20rpx'></view>
+  <view style='clear:both;'></view>
+  <view class='demo'></view>
+<!--
+  <view style='margin-top:25rpx;'><image style='width:10%;height:80rpx;margin-left:30rpx;float:left;' src='https://joango.cn/Img/EditPassword.png'></image><view style='float:left;margin-left:30rpx;font-size:20pt;'>修改密码</view>
+  </view>
+  <view style='clear:both;'></view>
+
+  <view style='margin-top:25rpx;'><image style='width:10%;height:80rpx;margin-left:30rpx;float:left;' src='https://joango.cn/Img/sleep.png'></image><view style='float:left;margin-left:30rpx;font-size:20pt;'>我的消息</view>
+  </view>
+  -->
+  <view style='clear:both;'></view>
+
+  <view bindtap="goback" style='margin-top:25rpx;'><image style='width:10%;height:80rpx;margin-left:30rpx;float:left;' src='https://joango.cn/Img/shezhi.png'></image><view style='float:left;margin-left:30rpx;font-size:20pt;'>设置</view>
+  </view>
+  <view style=' border-bottom:1px solid #ebebeb ;margin-left:20rpx;margin-bottom:20rpx'></view>
+  <view style='clear:both;'></view>
+  <view class='demo'></view>
+
+</view>
+

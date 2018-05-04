@@ -1,0 +1,16 @@
+.aa123{
+  float:right;
+  margin-right:30rpx;
+  font-size: 35rpx;
+  color:#919191;
+}
+.aa124{
+   float:left;
+   font-style:normal;
+   font-size:45rpt;
+   height:100%;
+   margin-left:30rpx;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}

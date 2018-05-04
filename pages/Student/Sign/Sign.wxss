@@ -1,0 +1,8 @@
+.inputs{
+    padding-left: 10px;
+    height: 40px;
+}
+
+.section{
+  margin-top: 50rpx;
+}

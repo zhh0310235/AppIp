@@ -1,0 +1,65 @@
+<!--pages/main/Cjuan/Sign/Sign.wxml-->
+<view>
+<view style=' border-bottom:10px solid #ebebeb;background-color:#EBEBEB;'></view> 
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签迟到标题</text> 
+    <view style='float:left; white-space: nowrap;'>
+        <input class="inputs" id="id2" bindtap="showDrop" placeholder="{{Tip}}" disabled="true" style='background-color:#ffffff;border-radius:10px;padding-left: 5px;' />
+         <view></view>
+         <!--
+          <view bindtap="Drops" data-value="{{ids}}" style='display:{{isShowSelect}};position: absolute;background-color: #f9f9f9;box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(0,0,0,0.2);width:auto;height:auto;'>{{ids}}</view>
+          -->
+          
+        
+
+      <view class="dropdown">
+       <view class="dropdown-content" style=' display: {{dis}};'>
+           <block  wx:for="{{result}}"wx:key="{{}}" >
+             <view class='con' bindtap="Drops" data-value="{{item.qdh}}" id='{{item.Tip}}'>{{item.Tip}}</view>
+           </block>
+       </view>
+      </view>
+        
+    </view>
+    
+
+  </view>
+  
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到二维码</text>
+    <image src="{{imgsrc}}" style="width:100%;height:650rpx;"></image>
+  </view>
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到码</text>
+    <input class="inputs" id="id1" placeholder="{{ids}}" disabled="true" style='background-color:#ffffff;border-radius:10px;' />      
+  </view>
+
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">限制时间</text>
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+     <view class="picker" style='font-color:#EBEBEB' >
+          {{array[index]}}
+     </view>
+     </picker>
+  </view>
+</view>
+
+
+
+<button style='margin-top:50rpx;margin-left:20%' type="primary" size="mini" open-type="share">分享签到码</button>
+<button style='margin-top:50rpx;margin-left:10%' type="primary" size="mini" bindtap="showDialogBtn">开始签迟到</button>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">签到倒计时</view>
+  <view class="modal-content">
+    <view class="container">
+      <text>倒计时: {{second}} </text>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="section">
+<text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">班级 </text>
+<input class="input" id="id1" placeholder="如：15软件 " auto-focus bindblur="bindBlur"/>
+<button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary">确定 </button>
+
+</view>
+
+
+
+

@@ -1,0 +1,14 @@
+input{
+  color: #666;
+  font-size: 28rpx;
+  border-style: solid double solid double;
+  background-color:#ffffff;
+  border-radius:10px;
+  width:75%;
+  height: 80rpx;
+  float:left;
+  margin-left:25rpx;
+}
+.section{
+  margin-top: 0rpx;
+}

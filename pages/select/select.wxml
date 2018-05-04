@@ -1,0 +1,4 @@
+<view>
+<button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" bindtap="tescher">我是老师</button>
+<button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" bindtap="student">我是学生</button>
+</view>

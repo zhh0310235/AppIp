@@ -1,0 +1,72 @@
+<view style='background-color:#f8f8f8'>
+<image src="../../image/shiguang.jpg" style="width:100%;height:300rpx;"></image>
+<view style='position:absolute;left: 250rpx;top: 100rpx;'>
+    <view><text style='font-style:normal;font-size:15pt;color:white'>学无止境</text></view>   
+</view>
+
+ <view style='margin-top:10rpx;'> 
+     <view>
+      <view class='viewleft' bindtap="Sign">
+        <image src='../../image/qiandao.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>签到</text>
+      </view>
+      <view class='viewleft' bindtap="Signquery">
+        <image src='../../image/qianchidao.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>签到查询</text>
+      </view>
+
+      <view class='viewleft' bindtap="Sign">
+        <image src='https://joango.cn/Img/online.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+         <text class='texts'>在线答疑</text>
+      </view>
+ 
+  </view>
+
+  <view style='clear:both;'></view>
+    <view style='margin-top:10rpx;'>
+       <view class='viewleft' bindtap="question">
+        <image src='../../image/kaoshi.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>课堂测试</text>
+      </view>
+
+      <view class='viewleft' bindtap="">
+        <image src='../../image/kechengguanli.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>成绩查询</text>
+      </view>
+
+      <view class='viewleft' bindtap="">
+        <image src='../../image/yaoqingxuesheng.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>学习成果</text>
+      </view>
+    </view>
+
+ <view style='clear:both;'></view>
+    <view style='margin-top:10rpx;'>
+      <view class='viewleft' bindtap="">
+        <image src='../../image/banji.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>学生评教</text>
+      </view>
+
+      <view class='viewleft' bindtap="Scour">
+        <image src='../../image/xuesheng.png' class='imgs' mode='aspectFit'></image>
+        <view style='clear:both;'></view>
+        <text class='texts'>课程表</text>
+      </view>
+
+    </view>
+    <view style='clear:both;'></view>
+    <view style='margin-top:50rpx;width:100%;background-color:#ffffff;font-style:normal;font-size:20pt;'>
+    <view style='float:left;margin-left:25rpx;'><text>发现更多</text></view>
+    
+    <view style='float:right;margin-right:50rpx'><text>>></text></view>
+    </view>
+
+ </view>
+</view>

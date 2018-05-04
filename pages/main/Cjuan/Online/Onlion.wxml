@@ -1,0 +1,7 @@
+<view class="section" >
+       <view style='margin-top:150rpx;margin-left:80rpx;;text-align:center;'>
+          <image src='https://joango.cn/Img/sleep.png' style='width:250rpx;height:250rpx;'></image>
+          <text style='margin-top:20rpx;display:block;'>暂无学生提问</text>
+       </view>
+</view>
+

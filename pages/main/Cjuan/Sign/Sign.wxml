@@ -1,0 +1,53 @@
+<!--pages/main/Cjuan/Sign/Sign.wxml-->
+<view>
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到标题</text>
+    <input class="inputs" id="id2" placeholder="建议填写本次上课内容" style='background-color:#ffffff;border-radius:10px;' bindinput="bindBlur" />
+  </view>
+  
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到二维码</text>
+    <image src="{{imgsrc}}" style="width:100%;height:700rpx;"></image>
+  </view>
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">签到码</text>
+    <input class="inputs" id="id1" placeholder="{{ids}}" disabled="true" style='background-color:#ffffff;border-radius:10px;' />      
+  </view>
+  <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">时间限制</text>
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+     <view class="picker">
+          {{array[index]}}
+     </view>
+     </picker>
+  </view>
+
+   <view class="section">
+    <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">范围限制</text>
+     <picker bindchange="bindLocalChange" value="{{index1}}" range="{{local}}">
+     <view class="picker">
+          {{local[index1]}}
+     </view>
+     </picker>
+   </view>
+</view>
+
+
+
+<button style='margin-top:30rpx;margin-left:20%' type="primary" size="mini" open-type="share">分享签到码</button>
+<button style='margin-top:30rpx;margin-left:10%' type="primary" size="mini" bindtap="showDialogBtn">开始签到</button>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">签到倒计时</view>
+  <view class="modal-content">
+    <view class="container">
+      <text>倒计时: {{second}} </text>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>

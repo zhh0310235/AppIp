@@ -1,0 +1,28 @@
+<!--pages/Student/Sign/Sign.wxml 学生签到页面-->
+<view>
+<view>任选一种签到方法：</view>
+  <view>
+      <view class="section">
+        <view><text style="float:left;margin-left:15pt;margin-right:15pt;font-size:15pt;">方法一：</text></view>
+        <view><input class="inputs" id="id2" placeholder="请输入签到码" style='background-color:#ffffff;border-radius:10px;' bindinput="bindBlur"/>
+         <button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" bindtap="ismunber">确定 </button>
+        </view>
+       </view>
+      
+        <view class="section">
+        <view><text style="float:left;margin-left:15pt;margin-right:15pt;font-size:15pt;">方法二：</text></view>
+        <view><input class="inputs" id="id2" placeholder="扫码签到" style='background-color:#ffffff;border-radius:10px;' />
+         <button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" bindtap="iscode">扫一扫</button>
+        </view>
+       </view>
+  </view>
+
+<button type="default" size="default"  plain="true" bindtap="defaults"  style='position:fixed;bottom:10rpx;width:100%;' hover-class="other-button-hover"> 回到首页 </button>
+
+
+
+  <view>
+ <modal title="签到结果" hidden="{{modalHidden}}" confirm-text="确定" cancel-text="取消" bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">{{tip}}</modal>
+</view>
+  
+</view>

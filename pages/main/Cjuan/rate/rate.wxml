@@ -1,0 +1,12 @@
+ <scroll-view scroll-y style="height:auto;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+ <view  wx:for="{{result}}"  class="swipers" wx:key="{{item.qdh}}"> 
+      <view bindtap="goGraph" data-num='{{item.num}}' data-number='{{item.number}}' data-count='{{item.count}}' id='{{item.qdh}}'>
+       <view style="float:left;font-style:normal;font-size:20pt;margin-left:30rpx;width:70%; "  data-valuess="{{item.qdh}}"><text>{{item.SignTip}}</text></view>
+          <view style="float:right;font-style:normal;font-size:20pt;color:#09bb07;margin-right:40rpx;"  data-valuess="{{item.qdh}}" ><text>详情</text></view>
+          <view style="clear:both"></view>
+          <view data-valuess="{{item.qdh}}"><text>　</text>
+            <view style="float:left;font-style:normal;font-size:15pt;height:100%;margin-left:30rpx;"><text>到课率：{{item.rate}}%</text></view>
+            <view style="float:right;font-style:normal;font-size:15pt;"><span class="badge">{{item.number+item.num}}/{{item.count}}人</span> <image src="../../../image/jiantouyou.png" style="width: 40rpx; height:40rpx; margin-right:10rpx;"></image> </view></view>
+      </view>
+</view>
+ </scroll-view>

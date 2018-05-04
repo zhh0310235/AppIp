@@ -1,0 +1,38 @@
+
+<view>
+  <view style='margin-bottom:10rpx;margin-left:20rpx;'> <text>授课教师</text></view>
+  <view style=' border-bottom:1px solid #ebebeb ;margin-bottom:20rpx'></view>
+   <ul style=';'>
+            <li>
+                <view><image src='{{img}}' class='aa123'></image></view>
+                <view>
+                    <text style='float:left;margin-left:80rpx;font-style:normal;font-size:17pt;height:100%;width: 430rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>{{name}}</text>
+                </view>
+                <view style='clear:both;'></view>
+            </li>         
+   </ul>
+   <view style=' border-bottom:10px solid #ebebeb;background-color:#E0EEEE;'></view> 
+
+  <view style='margin-bottom:10rpx;margin-left:20rpx;'> <text>学生</text></view>
+  <view style=' border-bottom:1px solid #ebebeb ;margin-bottom:15rpx'></view>
+  <ul>
+      <block wx:for="{{result}}" wx:key="{{item.ids}}">
+        <view bindtap="gostudent" data-text="{{item.ids}}" style='margin-top:0rpx;'>
+            <li>
+                <view><image src='{{item.touImage}}'  class='aa123'></image></view>
+                <view>
+                    <text style='float:left;margin-left:80rpx;font-style:normal;font-size:17pt;height:100%;width: 430rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;'>{{item.nnichen}}</text>
+                    <image src="../../../image/jiantouyou.png" style="width: 55rpx; height:55rpx;float:right; margin-right:20rpx;"></image>
+                </view>
+                <view style='clear:both;'></view>
+               <view style=' border-bottom:1px solid #ebebeb ;margin-left:75rpx;'></view>
+            </li> 
+        </view>
+      </block>      
+   </ul>
+   
+
+   
+   
+
+</view>

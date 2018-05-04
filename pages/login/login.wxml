@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view>
+<view><text>首次登陆，请绑定账号，以便网页端登陆!</text></view>
+<view style='margin-top:50rpx;'>
+         <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">手机号码：</text>
+         <input class="input" id="id1" placeholder="请输入手机号码 " bindinput="bindBlur1"/></view>
+<view style='margin-top:50rpx;'>
+         <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">登陆密码：</text>
+         <input class="input" id="id2" placeholder="请设置登录密码 " bindinput="bindBlur2" />
+</view>
+<view style='margin-top:50rpx;'>
+           <text style="float:left;margin-left:15pt;margin-right:15pt;font-size:20pt;">确认密码：</text>
+         <input class="input" id="id3" placeholder="请确认登录密码 " bindinput="bindBlur3"  />  
+</view>
+  
+         <button style='margin-top:50rpx;margin-left:40%' type="primary" size="mini" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary">确定 </button>
+</view>
